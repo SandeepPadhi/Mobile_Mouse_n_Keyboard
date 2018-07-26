@@ -17,4 +17,8 @@ Keymos has to installed on android phone whose apk is also provided in the repos
   mobile phones.This is future of loptop and pc control.
   
   
-  2.)Gmos-
+  2.)Gmos - G-gesture and mos-mouse i.e. gesture controled mouse. All task performed by mouse is mapped to the different gesture of hand.
+  Gesture is shown by position of finger. Three fingers are assigned three different color(color used are blue, red, yellow). At start It will ask you to calibrate color on trackbar. Yellow color finger decide free movement of mouse at that time other two finger should be shown to camera and they both will be static. For Right click , we have to just attach two color (blue and red). For left click , we have to attach yellow and blue color together.
+  for implementation watch following video...
+ Everytime we have to calibrate color which take time . hence we have made algorithm which will give HSV value for specific color without calibration. It is based on region of interest. Crop it then convert it into hsv then calculate mode (maximum pixels having same HSV value). which will be hsv value.
+ 
