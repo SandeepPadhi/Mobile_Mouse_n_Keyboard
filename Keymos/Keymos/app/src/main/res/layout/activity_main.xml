@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@color/grey"
+        android:id="@id/textView"
+        android:text="Enter IP Address"
+        android:textSize="30sp"
+        android:gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="L_Click"
+            android:id="@id/L_Click"
+            android:onClick="LClick"
+            android:textColor="@color/aqua"
+            android:layout_height="match_parent"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="D_Click"
+            android:id="@id/D_Click"
+            android:onClick="DClick"
+            android:textColor="@color/aqua"
+
+            android:layout_height="match_parent"
+            />
+        <ToggleButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Drag"
+            android:id="@id/Drag"
+            android:textOff="Drag_F"
+            android:onClick="DDrag"
+            android:textOn="Drag_O"
+            android:textColor="@color/aqua"
+
+            android:layout_height="match_parent"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Copy"
+            android:id="@id/Copy"
+            android:onClick="CCopy"
+            android:textColor="@color/aqua"
+
+            android:layout_height="match_parent"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Paste"
+            android:id="@id/Paste"
+            android:onClick="PPaste"
+            android:textColor="@color/aqua"
+
+            android:layout_height="match_parent"
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="R_Click"
+            android:id="@id/R_Click"
+            android:onClick="RClick"
+            android:textColor="@color/aqua"
+
+            android:layout_height="match_parent"
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:id="@id/Message"
+
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Write"
+            android:onClick="WriteMessage"
+            android:id="@id/Write"
+            android:textColor="@color/aqua"
+
+            android:layout_height="match_parent"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

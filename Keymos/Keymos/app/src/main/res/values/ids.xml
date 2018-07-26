@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="textView" type="id">textView</item>
+    <item name="L_Click" type="id">button</item>
+    <item name="R_Click" type="id">button</item>
+    <item name="D_Click" type="id">button</item>
+    <item name="Copy" type="id">button</item>
+    <item name="Paste" type="id">button</item>
+    <item name="Drag" type="id">togglebutton</item>
+    <item name="Write" type="id">button</item>
+    <item name="Message" type="id">edittext</item>
+    <item name="imageView1" type="id" />
+
+
+</resources>
