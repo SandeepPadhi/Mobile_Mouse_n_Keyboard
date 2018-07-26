@@ -1,0 +1,134 @@
+<!DOCTYPE>
+<html>
+<head>
+<script src="helping.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+
+
+</script>
+<link rel="stylesheet" href="my_index_tempo.css">
+</head>
+<body>
+
+
+
+<div class="header">
+  <a href="#default" class="logo">PASN</a>
+  <div class="header-right">
+    <a class="active" href="index.html">Home</a>
+	<a href="downloads.html">Downloads</a>
+    <a href="contactUs.html">Contact Us</a>
+    <a href="aboutUs.html">About Us</a>
+	 
+  </div>
+</div>
+
+
+<tr>
+<td>
+<label for="icon"> Your file</label>
+</td>
+<td>
+<progress value="0" max="100" id="uploader">%</progress>
+<input type="file" value="upload" id="upload_it" name="icon">
+</td>
+</tr>
+<!tr>
+<!td colspan=”5" style=”text-align:center”> 
+<!button type="button" id="upload_file" onclick="uploadFile()"><!/button> 
+<!/td> 
+<!/tr>
+
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 2</div>
+    <img src="hand_gesture.jpg" style="width:100%">
+    <div class="text" font-size = "100px">A system that replaces mouse making you to be a wizard who controls PCs with fingers.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 2 </div>
+    <img src="remote_control.jpg" style="width:100%">
+    <div class="text">Control your mouse cursor with a android application.</div>
+  </div>
+
+  
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  </div>
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB50z4EQfhmMUleMbXuro4MMuExqq5bKt4",
+    authDomain: "pasn-f22d7.firebaseapp.com",
+    databaseURL: "https://pasn-f22d7.firebaseio.com",
+    projectId: "pasn-f22d7",
+    storageBucket: "pasn-f22d7.appspot.com",
+    messagingSenderId: "149800041156"
+  };
+  firebase.initializeApp(config);
+  
+  var chooseFile=document.getElementById('uploader');
+  var uploadfile=document.getElementById('upload_it');
+  uploadfile.addEventListener('change',function(e){
+  var file=e.target.files[0];
+  var storageRef=firebase.storage().ref('images/' + file.name);
+  var uploadTask=storageRef.put(file);
+  uploadTask.on('state_changed', function(snapshot){
+  // Observe state change events such as progress, pause, and resume
+  // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+  var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+  uploader.value=progress;
+  console.log('Upload is ' + progress + '% done');
+  switch (snapshot.state) {
+    case firebase.storage.TaskState.PAUSED: // or 'paused'
+      console.log('Upload is paused');
+      break;
+    case firebase.storage.TaskState.RUNNING: // or 'running'
+      console.log('Upload is running');
+      break;
+  }
+}, function(error) {
+  // Handle unsuccessful uploads
+}, function() {
+  // Handle successful uploads on complete
+  // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+  uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+    console.log('File available at', downloadURL);
+  });
+});
+  
+  });
+  
+</script>
+
+<footer>
+<p>Made with 🖤 All rights reserved to pasn-f22d7.firebaseapp.com © 2018</p></footer>
+
+
+</body>
+</html>
+
+

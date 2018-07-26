@@ -1,0 +1,68 @@
+<!DOCTYPE>
+<html>
+<head>
+<script src="helping.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+
+
+</script>
+<link rel="stylesheet" href="my_index_tempo.css">
+</head>
+<body>
+
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB50z4EQfhmMUleMbXuro4MMuExqq5bKt4",
+    authDomain: "pasn-f22d7.firebaseapp.com",
+    databaseURL: "https://pasn-f22d7.firebaseio.com",
+    projectId: "pasn-f22d7",
+    storageBucket: "pasn-f22d7.appspot.com",
+    messagingSenderId: "149800041156"
+  };
+  firebase.initializeApp(config);
+</script>
+<div class="header">
+  <a href="#default" class="logo">PASN</a>
+  <div class="header-right">
+    <a class="active" href="#home">Home</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+	<a href="uplod.html">Upload</a>
+	<div class="dropdown">
+    <button class="dropbtn">Products 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Hand Of Gestures</a>
+      <a href="#">R-control</a>
+      <a href="#">other</a>
+    </div>
+  </div> 
+  </div>
+</div>
+
+
+<tr>
+<td>
+<label for="icon"> Your file</label>
+</td>
+<td>
+<input type="file" accept=".zip" id="upload" name="icon">
+</td>
+</tr>
+
+
+
+
+
+
+<footer>
+<p>All rights reserved to pasn-f22d7.firebaseapp.com </p></footer>
+
+
+</body>
+</html>
+
+
