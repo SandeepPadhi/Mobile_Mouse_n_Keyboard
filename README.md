@@ -1,4 +1,4 @@
-# Mobile_Mouse_n_Keyboard
+# Keymos and Gmos
 Here ,we have developed two softwares:
 1.Keymos
 2.Gmos
